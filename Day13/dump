@@ -1,0 +1,14 @@
+
+    if (iid*y + idx) % int(stamps[idx]) == 0:
+        if not found_first:
+            found_first = True
+            increment = int(stamps[idx])
+        # Check the rest
+        found = True
+        for i in range(1, len(stamps)):
+            if stamps[i] != 'x':
+                if (iid*y + i) % int(stamps[i]) != 0:
+                    break
+        else:
+            print('Found the son of a bitch: ', iid*y)
+            break
